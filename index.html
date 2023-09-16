@@ -15,17 +15,40 @@
     />
   </head>
   <body>
-    <div id="nav">
-      <a href="index.html"
-        ><h3><b>HEAVEN</b> PENA</h3></a
-      >
+    <header>
+      <nav>
+        <ul class="nav-bar">
+          <li class="logo">
+            <a href="index.html"
+              ><h3><b>HEAVEN</b> PENA</h3></a
+            >
+          </li>
 
-      <div class="nav-buttons">
-        <a href="#page1"> <button>About</button></a>
-        <a href="#page2"> <button>Projects</button></a>
-        <a href="#page3"> <button>Contact</button></a>
-      </div>
-    </div>
+          <input type="checkbox" id="check" />
+          <span class="menu">
+            <img src="images/moon.png" id="icon" />
+
+            <li>
+              <a href="#page1"> <button>About</button></a>
+            </li>
+            <li>
+              <a href="#page2"> <button>Projects</button></a>
+            </li>
+            <li>
+              <a href="#page3"> <button>Contact</button></a>
+            </li>
+
+            <label for="check" class="close-menu"
+              ><i class="fas fa-times"></i
+            ></label>
+          </span>
+
+          <label for="check" class="open-menu"
+            ><i class="fas fa-bars"></i
+          ></label>
+        </ul>
+      </nav>
+    </header>
 
     <div id="main">
       <div id="page">
@@ -115,6 +138,16 @@
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+      var icon = document.getElementById("icon");
+      icon.onclick = function () {
+        document.body.classList.toggle("dark-theme");
+        if (document.body.classList.contains("dark-theme")) {
+          icon.src = "images/sun.png";
+        } else {
+          icon.src = "images/moon.png";
+        }
+      };
+    </script>
   </body>
 </html>
