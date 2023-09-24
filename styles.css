@@ -91,7 +91,7 @@ canvas {
   align-items: center;
   justify-content: space-between;
   list-style: none;
-  height: 7%;
+  height: 8%;
   width: 100%;
   position: fixed;
   z-index: 99;
@@ -154,7 +154,8 @@ canvas {
 }
 
 #icon {
-  width: 30px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
 }
 
@@ -194,7 +195,7 @@ canvas {
   }
 }
 
-#page > h3 {
+/* #page > h3 {
   position: absolute;
   top: 55%;
   font-family: gilroy;
@@ -209,6 +210,50 @@ canvas {
   font-family: gilroy;
   font-weight: 500;
 }
+ */
+
+.home-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  top: 50%;
+}
+
+.home-left {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding-bottom: 10vh;
+  padding-left: 2vw;
+  list-style: none;
+}
+
+.home-left h3 {
+  padding-bottom: 2vh;
+  color: var(--primary-color);
+}
+
+.home-left button {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.home-left button:hover {
+  cursor: pointer;
+}
+
+.home-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
 #page1 > #right-text {
   position: absolute;
   top: 30%;
